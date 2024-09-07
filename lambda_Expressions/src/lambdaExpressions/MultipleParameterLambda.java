@@ -1,7 +1,5 @@
 package lambdaExpressions;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 public class MultipleParameterLambda {
     interface  Function1{
         int operation(int a, int b);
@@ -17,6 +15,10 @@ public class MultipleParameterLambda {
         Function1 multiply=(int x,int y)->x*y;
     }
     MultipleParameterLambda multipleParameterLambda=new MultipleParameterLambda();
-    System.out.println("");
+    System.out.println("Addition is"+multipleParameterLambda.operate(6,2,add));
+    System.out.println("Multiplication is"+multipleParameterLambda.operate(6,2,multiply));
+
+    Function2 function2=message -> System.out.println("Hello"+message);
+    function2.message("MultipleparameterLambda executed");
 
 }
