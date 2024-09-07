@@ -17,5 +17,6 @@ public class LambdaExpressionExample4 {
         Sayable1 s2=name ->{
             return "Hello, "+name;
         } ;
+        System.out.println(s2.say("Monoo"));
     }
 }
